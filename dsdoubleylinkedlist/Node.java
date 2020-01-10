@@ -11,6 +11,26 @@ public class Node {
 
      @Override
     public String toString(){
-        return "<- " +data + " ->";
+        String nextData;
+        String previousData;
+        if(next != null){
+            nextData = Integer.toHexString(this.next.hashCode());
+        }else {
+            nextData = "null    ";
+        }
+
+        if(previous != null){
+            previousData = Integer.toHexString(this.previous.hashCode());
+        }else {
+            previousData = "null    ";
+        }
+        return  getClass().getSimpleName()
+                + " "
+                + Integer.toHexString(hashCode()) 
+                + " : " + String.format("%8d", data)
+                + " Next " + nextData
+                + " Previous "  
+                + previousData 
+                + " | ";
     }
 }
