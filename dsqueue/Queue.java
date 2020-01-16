@@ -8,28 +8,24 @@ public class Queue {
     private int front;
     private int back;
     private int[] arr;
-    private int nItems;
     private int size;
 
-    Queue(int size){
+    Queue(int size) {
         this.size = size;
         this.arr = new int[size];
-        front = 0;
-        back = -1;
-        nItems = 0;
+        this.front = 0;
+        this.back = -1;
     }
 
-    public void insert(int data){
+    public void insert(int data) {
         back++;
         arr[back] = data;
-        nItems++;
     }
 
-    public int remove(){
+    public int remove() {
         int temp = arr[front];
         front++;
-        nItems--;
-        if(front == size){
+        if (front == size) {
             front = 0;
         }
         return temp;
