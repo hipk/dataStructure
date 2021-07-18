@@ -2,6 +2,7 @@ package dsStack;
 
 /**
  * Stack
+ * message update
  */
 public class Stack {
 
@@ -18,7 +19,7 @@ public class Stack {
     // push method 
     public void push(int data){
         if(top == size-1){
-            System.out.println("Stack is full");
+            System.out.println("Stack is full.");
             return;
         } 
         else {
@@ -32,7 +33,7 @@ public class Stack {
             return arr[top--];
            
         }else {
-            System.out.println("Stack is empty");
+            System.out.println("Stack is empty.");
             return -32767;
            
         }
